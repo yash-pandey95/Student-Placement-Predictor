@@ -1,0 +1,4 @@
+project_filebrowser.db
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
