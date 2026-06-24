@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Placement Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">🎓</div>
+
+        <h1>Student Placement Predictor</h1>
+
+        <div class="info">
+            ML Model Accuracy: 84.44%
+        </div>
+
+        <div class="input-group">
+            <label>Gender</label>
+            <select id="gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+                <option value="2">Other</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Age</label>
+            <input type="number" id="age" placeholder="Enter age">
+        </div>
+
+        <div class="input-group">
+            <label>10th Board Percentage</label>
+            <input type="number" id="tenth_percentage" placeholder="Enter 10th percentage">
+        </div>
+
+        <div class="input-group">
+            <label>12th Board Percentage</label>
+            <input type="number" id="twelfth_percentage" placeholder="Enter 12th percentage">
+        </div>
+
+        <div class="input-group">
+            <label>Degree Percentage</label>
+            <input type="number" id="degree_percentage" placeholder="Enter degree percentage">
+        </div>
+
+        <div class="input-group">
+            <label>Internships Count</label>
+            <input type="number" id="internships_count" placeholder="Number of internships">
+        </div>
+
+        <div class="input-group">
+            <label>Projects Count</label>
+            <input type="number" id="projects_count" placeholder="Number of projects">
+        </div>
+
+        <div class="input-group">
+            <label>City Tier</label>
+            <select id="city_tier">
+                <option value="Tier 1">Tier 1</option>
+                <option value="Tier 2">Tier 2</option>
+                <option value="Tier 3">Tier 3</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Degree Field</label>
+            <select id="degree_field">
+                <option value="Engineering">Engineering</option>
+                <option value="Business">Business</option>
+                <option value="Arts">Arts</option>
+                <option value="Science">Science</option>
+            </select>
+        </div>
+
+        <button id="predictBtn">
+            Predict Placement
+        </button>
+
+        <div id="resultCard">
+            Prediction will appear here
+        </div>
+
+        <footer>
+            Developed by Yash Pandey 🚀
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

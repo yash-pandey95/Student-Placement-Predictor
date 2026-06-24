@@ -1,39 +1,58 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import pandas as pd
 import joblib
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 model = joblib.load("placement_predictor.pkl")
 
 class StudentData(BaseModel):
-    ssc_percentage: float
-    hsc_percentage: float
+    gender: int
+    age: int
+    tenth_percentage: float
+    twelfth_percentage: float
     degree_percentage: float
     internships_count: int
     projects_count: int
+    city_tier: str
+    degree_field: str
 
 @app.get("/")
 def home():
-    return {"message": "Student Placement Predictor API"}
+    return {
+        "message": "Student Placement Predictor API"
+    }
 
 @app.post("/predict")
 def predict(data: StudentData):
-    return {"received_data": data}
 
+    input_df = pd.DataFrame([{
+        "gender": data.gender,
+        "age": data.age,
+        "tenth_percentage": data.tenth_percentage,
+        "twelfth_percentage": data.twelfth_percentage,
+        "degree_percentage": data.degree_percentage,
+        "internships_count": data.internships_count,
+        "projects_count": data.projects_count,
+        "city_tier": data.city_tier,
+        "degree_field": data.degree_field
+    }])
 
-feature_names = joblib.load("feature_names.pkl")
+    prediction = model.predict(input_df)
 
-@app.get("/features")
-def features():
+    result = "Placed" if prediction[0] == 1 else "Not Placed"
+
     return {
-        "total_features": len(feature_names),
-        "features": feature_names
-    }
-
-@app.get("/model-info")
-def model_info():
-    return {
-        "model_type": str(type(model)),
-        "features_required": 29
+        "prediction": result
     }

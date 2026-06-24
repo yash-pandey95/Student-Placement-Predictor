@@ -1,14 +1,38 @@
 # Student Placement Predictor
 
-## Goal
-Predict placement probability based on student performance.
+## Project Overview
+
+Machine Learning project that predicts whether a student will be placed based on academic performance and profile.
 
 ## Features
-- Placement Prediction
-- ML Model
-- Full Stack Application
-- FastAPI Backend
-- Database Storage
 
-## Status
-Project Started
+- FastAPI Backend
+- Logistic Regression Model
+- OneHotEncoder Pipeline
+- Interactive Frontend
+- Real-time Prediction
+
+## Technologies
+
+- Python
+- Pandas
+- Scikit-Learn
+- FastAPI
+- HTML
+- CSS
+- JavaScript
+
+## Model Accuracy
+
+84.44%
+
+## Screenshots
+
+(Add screenshots here)
+
+## How to Run
+
+1. Clone repository
+2. Install requirements
+3. Run FastAPI
+4. Open frontend
