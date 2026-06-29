@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Placement Predictor</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,82 +22,289 @@
 
     <div class="container">
 
-        <div class="logo">🎓</div>
+        <!-- Logo -->
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
 
+        <!-- Heading -->
         <h1>Student Placement Predictor</h1>
 
-        <div class="info">
-            ML Model Accuracy: 84.44%
+        <p class="subtitle">
+            Predict your placement chances with Machine Learning 🚀
+        </p>
+
+        <!-- Accuracy -->
+        <div class="accuracy">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Model Accuracy:</span>
+            <strong>84.44%</strong>
         </div>
 
-        <div class="input-group">
-            <label>Gender</label>
-            <select id="gender">
-                <option value="0">Male</option>
-                <option value="1">Female</option>
-                <option value="2">Other</option>
-            </select>
+        <!-- FORM -->
+        <div class="form">
+
+            <!-- Gender -->
+            <div class="input-group">
+                <label>Gender</label>
+
+                <div class="inputBox">
+                    <i class="fa-solid fa-user"></i>
+
+                    <select id="gender">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                        <option value="2">Other</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <!-- Age -->
+            <div class="input-group">
+
+                <label>Age</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter your age">
+
+                </div>
+
+            </div>
+
+            <!-- 10th -->
+
+            <div class="input-group">
+
+                <label>10th Board Percentage</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-percent"></i>
+
+                    <input
+                        type="number"
+                        id="tenth_percentage"
+                        placeholder="Enter 10th percentage">
+
+                </div>
+
+            </div>
+
+            <!-- 12th -->
+
+            <div class="input-group">
+
+                <label>12th Board Percentage</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-percent"></i>
+
+                    <input
+                        type="number"
+                        id="twelfth_percentage"
+                        placeholder="Enter 12th percentage">
+
+                </div>
+
+            </div>
+
+            <!-- Degree -->
+
+            <div class="input-group">
+
+                <label>Degree Percentage</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-percent"></i>
+
+                    <input
+                        type="number"
+                        id="degree_percentage"
+                        placeholder="Enter degree percentage">
+
+                </div>
+
+            </div>
+
+            <!-- Internship -->
+
+            <div class="input-group">
+
+                <label>Internships Count</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <input
+                        type="number"
+                        id="internships_count"
+                        placeholder="Number of internships">
+
+                </div>
+
+            </div>
+
+            <!-- Projects -->
+
+            <div class="input-group">
+
+                <label>Projects Count</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-folder"></i>
+
+                    <input
+                        type="number"
+                        id="projects_count"
+                        placeholder="Number of projects">
+
+                </div>
+
+            </div>
+
+            <!-- City -->
+
+            <div class="input-group">
+
+                <label>City Tier</label>
+
+                <div class="inputBox">
+
+                    <i class="fa-solid fa-city"></i>
+
+                    <select id="city_tier">
+
+                        <option value="Tier 1">Tier 1</option>
+
+                        <option value="Tier 2">Tier 2</option>
+
+                        <option value="Tier 3">Tier 3</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="input-group">
-            <label>Age</label>
-            <input type="number" id="age" placeholder="Enter age">
-        </div>
+        <!-- Degree Field -->
 
-        <div class="input-group">
-            <label>10th Board Percentage</label>
-            <input type="number" id="tenth_percentage" placeholder="Enter 10th percentage">
-        </div>
+        <div class="input-group full">
 
-        <div class="input-group">
-            <label>12th Board Percentage</label>
-            <input type="number" id="twelfth_percentage" placeholder="Enter 12th percentage">
-        </div>
-
-        <div class="input-group">
-            <label>Degree Percentage</label>
-            <input type="number" id="degree_percentage" placeholder="Enter degree percentage">
-        </div>
-
-        <div class="input-group">
-            <label>Internships Count</label>
-            <input type="number" id="internships_count" placeholder="Number of internships">
-        </div>
-
-        <div class="input-group">
-            <label>Projects Count</label>
-            <input type="number" id="projects_count" placeholder="Number of projects">
-        </div>
-
-        <div class="input-group">
-            <label>City Tier</label>
-            <select id="city_tier">
-                <option value="Tier 1">Tier 1</option>
-                <option value="Tier 2">Tier 2</option>
-                <option value="Tier 3">Tier 3</option>
-            </select>
-        </div>
-
-        <div class="input-group">
             <label>Degree Field</label>
-            <select id="degree_field">
-                <option value="Engineering">Engineering</option>
-                <option value="Business">Business</option>
-                <option value="Arts">Arts</option>
-                <option value="Science">Science</option>
-            </select>
+
+            <div class="inputBox">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <select id="degree_field">
+
+                    <option value="Engineering">Engineering</option>
+
+                    <option value="Business">Business</option>
+
+                    <option value="Science">Science</option>
+
+                    <option value="Arts">Arts</option>
+
+                </select>
+
+            </div>
+
         </div>
+
+        <!-- BUTTON -->
 
         <button id="predictBtn">
+
+            <i class="fa-solid fa-rocket"></i>
+
             Predict Placement
+
         </button>
 
+        <!-- RESULT -->
+
         <div id="resultCard">
-            Prediction will appear here
+
+            <div class="resultIcon">
+
+                🎯
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Your prediction result will appear here
+
+                </h3>
+
+                <p>
+
+                    Fill all details above and click Predict
+
+                </p>
+
+            </div>
+
         </div>
 
+        <!-- FEATURES -->
+
+        <div class="features">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h4>ML Powered</h4>
+
+                <p>Machine Learning Model</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h4>Smart Prediction</h4>
+
+                <p>Accurate placement prediction</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-trophy"></i>
+
+                <h4>Better Future</h4>
+
+                <p>Step closer to your dream career</p>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+
         <footer>
-            Developed by Yash Pandey 🚀
+
+            Made with ❤️ by <strong>Yash Pandey</strong>
+
         </footer>
 
     </div>
