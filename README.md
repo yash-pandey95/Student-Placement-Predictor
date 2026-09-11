@@ -1,38 +1,26 @@
-# Student Placement Predictor
+# 🎓 Student Placement Predictor
 
-## Project Overview
+Predict whether a student is likely to be placed using
+Machine Learning.
 
-Machine Learning project that predicts whether a student will be placed based on academic performance and profile.
+## 🚀 Live Demo
+https://student-placement-predictor-frontend-tae6.onrender.com
 
-## Features
+## 📊 Model
+- Logistic Regression
+- Accuracy: 84.44%
+- Scikit-learn Pipeline
+- OneHotEncoder
 
-- FastAPI Backend
-- Logistic Regression Model
-- OneHotEncoder Pipeline
-- Interactive Frontend
-- Real-time Prediction
+## 🛠️ Tech Stack
+Python
+Scikit-learn
+Pandas
+FastAPI
+HTML
+CSS
+JavaScript
+Render
 
-## Technologies
-
-- Python
-- Pandas
-- Scikit-Learn
-- FastAPI
-- HTML
-- CSS
-- JavaScript
-
-## Model Accuracy
-
-84.44%
-
-## Screenshots
-
-(Add screenshots here)
-
-## How to Run
-
-1. Clone repository
-2. Install requirements
-3. Run FastAPI
-4. Open frontend
+## 🏗️ Architecture
+Frontend → FastAPI → ML Pipeline → Prediction
